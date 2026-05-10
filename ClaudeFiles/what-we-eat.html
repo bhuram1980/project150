@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>What We Eat — Project 150</title>
+<meta name="description" content="No special diets. Traditional Telugu home cooking — made more carefully, portioned honestly, timed strictly."/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div class="cursor"></div>
+<div class="cursor-ring"></div>
+<div class="ambient"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-p">PROJECT</span>
+    <span class="nav-logo-n">150</span>
+  </a>
+  <button class="nav-burger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="our-story.html">Our Story</a></li>
+    <li><a href="journey.html">The Journey</a></li>
+    <li><a href="what-we-eat.html" class="active">What We Eat</a></li>
+    <li><a href="learnings.html">Learnings</a></li>
+  </ul>
+</nav>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="page-hero-num">4×</div>
+  <div class="wrap page-hero-inner">
+    <div class="section-label">Food & Kitchen</div>
+    <h1>Simple<br><span class="gold">Food.</span><br>Strict<br>Timing.</h1>
+    <p>No special diets. Traditional Telugu home cooking — made more carefully, portioned honestly, timed strictly.</p>
+  </div>
+</section>
+
+<!-- ── DAILY STRUCTURE ────────────────────────────────────── -->
+<section class="section">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-label">Daily Structure</div>
+      <h2 class="section-h2" style="margin-bottom:3rem;">What a<br><span class="accent">Day</span> Looks Like</h2>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1px;background:var(--line2);border:1px solid var(--line2);">
+      <div class="meal-card reveal">
+        <div class="meal-time-col">
+          <div class="meal-time-word">Morning</div>
+          <div class="meal-time-clock">6:30 AM</div>
+        </div>
+        <div class="meal-body-col">
+          <div class="meal-name">Light Start · Walk First</div>
+          <p class="meal-desc">Warm water with raw ginger before anything. Walk first — no food until done. After the walk: one fruit (guava, papaya, or banana), a handful of soaked almonds, black tea without sugar.</p>
+        </div>
+      </div>
+      <div class="meal-card reveal reveal-delay-1">
+        <div class="meal-time-col">
+          <div class="meal-time-word">Lunch</div>
+          <div class="meal-time-clock">12:30 PM</div>
+        </div>
+        <div class="meal-body-col">
+          <div class="meal-name">The Main Meal</div>
+          <p class="meal-desc">Two small rotis or a small bowl of brown rice. One portion of dal or sambar — lentils non-negotiable at every meal. One vegetable curry, preferably leafy greens or gourd family. A small bowl of curd. No second helpings.</p>
+        </div>
+      </div>
+      <div class="meal-card reveal reveal-delay-2">
+        <div class="meal-time-col">
+          <div class="meal-time-word">Evening</div>
+          <div class="meal-time-clock">5:00 PM</div>
+        </div>
+        <div class="meal-body-col">
+          <div class="meal-name">Small · No Packets</div>
+          <p class="meal-desc">Light rasam or vegetable soup. A small handful of roasted peanuts or chana. No biscuits, no packaged snacks, no fried items. This rule has no exceptions — not for guests, not for festivals.</p>
+        </div>
+      </div>
+      <div class="meal-card reveal reveal-delay-3">
+        <div class="meal-time-col">
+          <div class="meal-time-word">Dinner</div>
+          <div class="meal-time-clock">7:30 PM</div>
+        </div>
+        <div class="meal-body-col">
+          <div class="meal-name">Light · Always Before 8 PM</div>
+          <p class="meal-desc">One roti or small portion of khichdi. One vegetable dish — steamed or lightly sautéed. No rice at dinner. Eating finishes strictly by 8 PM. A short 10-minute walk after dinner if possible.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RULES + GROCERY ────────────────────────────────────── -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="split">
+
+      <!-- House Rules -->
+      <div class="reveal">
+        <div class="section-label">Non-Negotiables</div>
+        <h2 class="section-h2" style="margin-bottom:2.5rem;">House<br><span class="accent">Rules</span></h2>
+        <ul class="rules-list">
+          <li class="rule-item">
+            <span class="rule-num">I</span>
+            <div class="rule-text">
+              <strong>No sugary drinks, ever</strong>
+              <span>No juice, no sweetened chai, no soft drinks. Water or plain tea only. No exceptions.</span>
+            </div>
+          </li>
+          <li class="rule-item">
+            <span class="rule-num">II</span>
+            <div class="rule-text">
+              <strong>No packaged snacks in the house</strong>
+              <span>If it comes in a packet with a shelf life, it doesn't come home. The rule is the boundary.</span>
+            </div>
+          </li>
+          <li class="rule-item">
+            <span class="rule-num">III</span>
+            <div class="rule-text">
+              <strong>Fixed meal timings — always</strong>
+              <span>Same time every day. Consistency is the discipline, not restriction.</span>
+            </div>
+          </li>
+          <li class="rule-item">
+            <span class="rule-num">IV</span>
+            <div class="rule-text">
+              <strong>Protein and fiber at every meal</strong>
+              <span>Dal, curd, lentils, or eggs. Greens or sabzi. Every single plate, every single day.</span>
+            </div>
+          </li>
+          <li class="rule-item">
+            <span class="rule-num">V</span>
+            <div class="rule-text">
+              <strong>8 glasses of water daily</strong>
+              <span>Tracked. One glass before each meal makes it easier to hit the target.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Grocery -->
+      <div class="reveal reveal-delay-2">
+        <div class="section-label">వంటిల్లు జాబితా</div>
+        <h2 class="section-h2" style="margin-bottom:2.5rem;">Monthly<br><span class="accent">Kitchen</span><br>List</h2>
+
+        <div class="grocery-cat">
+          <div class="grocery-cat-name">Vegetables · కూరగాయలు</div>
+          <div class="grocery-tags">
+            <span class="grocery-tag">Spinach <em>పాలకూర</em></span>
+            <span class="grocery-tag">Bitter gourd <em>కారేల</em></span>
+            <span class="grocery-tag">Ridge gourd <em>బీరకాయ</em></span>
+            <span class="grocery-tag">Bottle gourd <em>సొర</em></span>
+            <span class="grocery-tag">Drumstick <em>మునగకాయ</em></span>
+            <span class="grocery-tag">Fenugreek <em>మెంతికూర</em></span>
+            <span class="grocery-tag">Tomatoes <em>టమాటా</em></span>
+          </div>
+        </div>
+
+        <div class="grocery-cat">
+          <div class="grocery-cat-name">Proteins · ప్రోటీన్లు</div>
+          <div class="grocery-tags">
+            <span class="grocery-tag">Toor dal <em>కందిపప్పు</em></span>
+            <span class="grocery-tag">Moong dal <em>పెసరపప్పు</em></span>
+            <span class="grocery-tag">Chana dal <em>శనగపప్పు</em></span>
+            <span class="grocery-tag">Curd <em>పెరుగు</em></span>
+            <span class="grocery-tag">Eggs <em>గుడ్లు</em></span>
+            <span class="grocery-tag">Peanuts <em>వేరుశనగలు</em></span>
+          </div>
+        </div>
+
+        <div class="grocery-cat">
+          <div class="grocery-cat-name">Grains · ధాన్యాలు</div>
+          <div class="grocery-tags">
+            <span class="grocery-tag">Wheat roti <em>గోధుమ రొట్టె</em></span>
+            <span class="grocery-tag">Brown rice <em>బ్రౌన్ రైస్</em></span>
+            <span class="grocery-tag">Oats <em>ఓట్స్</em></span>
+            <span class="grocery-tag">Ragi <em>రాగి</em></span>
+          </div>
+        </div>
+
+        <div class="grocery-cat">
+          <div class="grocery-cat-name">Add-ons · ఇతరత్రా</div>
+          <div class="grocery-tags">
+            <span class="grocery-tag">Ginger <em>అల్లం</em></span>
+            <span class="grocery-tag">Turmeric <em>పసుపు</em></span>
+            <span class="grocery-tag">Almonds <em>బాదాం</em></span>
+            <span class="grocery-tag">Flaxseeds <em>అవిసె గింజలు</em></span>
+            <span class="grocery-tag">Amla <em>ఉసిరి</em></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-p">PROJECT</span>
+        <span class="nav-logo-n">150</span>
+      </a>
+      <span class="footer-tagline">Traditional food. Modern discipline.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

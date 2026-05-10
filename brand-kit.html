@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 150 — Brand Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #faf7f2;
+      --cream-dark: #f0ebe1;
+      --paper:      #e8e2d9;
+      --ink:        #0f1117;
+      --ink-mid:    #2d3142;
+      --ink-light:  #5c6070;
+      --ink-faint:  #9098a8;
+      --red:        #e30613;
+      --red-dark:   #b8000d;
+      --gold:       #9a7a2e;
+      --gold-light: #c9a84c;
+      --border:     rgba(15,17,23,0.1);
+      --border-strong: rgba(15,17,23,0.2);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container { width: min(1100px, 94vw); margin-inline: auto; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--ink);
+      color: rgba(255,255,255,0.5);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.6rem 0;
+      text-align: center;
+    }
+
+    /* ── COVER ── */
+    .cover {
+      background: var(--ink);
+      min-height: 420px;
+      display: grid;
+      align-items: end;
+      padding: 5rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::before {
+      content: '150';
+      position: absolute;
+      right: -2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 28vw;
+      font-weight: 700;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      pointer-events: none;
+      letter-spacing: -0.05em;
+    }
+
+    .cover-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .cover-logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cover-logo .lp {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .cover-logo .l150 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--red);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .cover-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+    }
+
+    .cover-sub {
+      color: rgba(255,255,255,0.4);
+      font-size: 0.88rem;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-header {
+      padding: 4rem 0 2rem;
+      border-bottom: 2px solid var(--ink);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .section-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--cream-dark);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    /* ── LOGO SECTION ── */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-box {
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      min-height: 180px;
+      border: 1px solid var(--border);
+    }
+
+    .logo-box-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo-mark {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .lm-p  { font-family:'Inter',sans-serif; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; }
+    .lm-150 { font-family:'Playfair Display',serif; font-weight:700; letter-spacing:-0.03em; line-height:1; }
+
+    .logo-note {
+      font-size: 0.78rem;
+      margin-top: 1.2rem;
+      opacity: 0.5;
+    }
+
+    /* ── COLORS ── */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .color-swatch {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .swatch-block {
+      height: 90px;
+    }
+
+    .swatch-info {
+      padding: 0.75rem 0.85rem;
+      background: #fff;
+    }
+
+    .swatch-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--ink);
+      display: block;
+    }
+
+    .swatch-hex {
+      font-size: 0.72rem;
+      color: var(--ink-faint);
+      font-family: 'Inter', monospace;
+      margin-top: 0.15rem;
+      display: block;
+    }
+
+    .swatch-use {
+      font-size: 0.68rem;
+      color: var(--ink-faint);
+      margin-top: 0.25rem;
+      display: block;
+      line-height: 1.4;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    .type-row {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .type-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      padding-top: 0.4rem;
+    }
+
+    .type-meta {
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      margin-top: 0.4rem;
+    }
+
+    /* ── VOICE ── */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .voice-card {
+      border-radius: 12px;
+      padding: 1.8rem;
+      border: 1px solid var(--border);
+    }
+
+    .voice-title {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .voice-item {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+      align-items: flex-start;
+      color: var(--ink-mid);
+    }
+
+    .voice-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* ── TAGLINES ── */
+    .tagline-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .tagline-item {
+      padding: 1.2rem 1.5rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .tagline-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .tagline-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      color: var(--ink-faint);
+      flex-shrink: 0;
+    }
+
+    .tagline-badge.primary {
+      background: var(--red);
+      color: #fff;
+      border-color: var(--red);
+    }
+
+    /* ── USAGE RULES ── */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .rule-card {
+      padding: 1.8rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .rule-item {
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .rule-item:last-child { border-bottom: none; }
+
+    /* ── FOOTER ── */
+    .kit-footer {
+      background: var(--ink);
+      padding: 3rem 0;
+      margin-top: 6rem;
+      text-align: center;
+    }
+
+    .kit-footer-logo {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .kit-footer-logo .fp  { font-family:'Inter',sans-serif; font-size:0.95rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.6); }
+    .kit-footer-logo .f150 { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:700; color:var(--red); }
+
+    .kit-footer p { color: rgba(255,255,255,0.3); font-size:0.82rem; }
+
+    /* ── Utility ── */
+    .mt2 { margin-top: 2rem; }
+    .mb1 { margin-bottom: 1rem; }
+    .caption { font-size: 0.78rem; color: var(--ink-faint); margin-top: 0.5rem; }
+
+    @media (max-width: 860px) {
+      .logo-grid  { grid-template-columns: 1fr; }
+      .color-grid { grid-template-columns: repeat(3, 1fr); }
+      .voice-grid, .rules-grid { grid-template-columns: 1fr; }
+      .type-row   { grid-template-columns: 1fr; gap: 0.5rem; }
+      .section-num { font-size: 2.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      .color-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">Project 150 · Brand Kit · May 2026 · Confidential — Family Use Only</div>
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="container cover-inner">
+      <span class="cover-label">Brand Identity System</span>
+      <div class="cover-logo">
+        <span class="lp">Project</span>
+        <span class="l150">150</span>
+      </div>
+      <h1 class="cover-title">Brand Kit</h1>
+      <p class="cover-sub">Colors · Typography · Logo · Voice · Usage Rules · Taglines</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- ── 01 LOGO ── -->
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <h2 class="section-title">Logo</h2>
+    </div>
+
+    <div class="logo-grid">
+
+      <!-- Primary on light -->
+      <div class="logo-box" style="background:#fff;">
+        <div>
+          <div class="logo-box-label" style="color:var(--ink-faint);">Primary · Light Background</div>
+          <div class="logo-mark" style="margin-top:0.5rem;">
+            <span class="lm-p" style="font-size:1.1rem; color:var(--ink);">Project</span>
+            <span class="lm-150" style="font-size:2.2rem; color:var(--red);">150</span>
+          </div>
+        </div>
+        <p class="logo-note" style="color:var(--ink-faint);">Use on cream or white</p>
+      </div>
+
+      <!-- Primary on dark -->
+      <div class="logo-box" style="background:var(--ink);">
+        <div>
+          <div class="logo-box-label" style="color:rgba(255,255,255,0.3);">Primary · Dark Background</div>
+          <div class="logo-mark" style="margin-top:0.5rem;">
+            <span class="lm-p" style="font-size:1.1rem; color:#fff;">Project</span>
+            <span class="lm-150" style="font-size:2.2rem; color:var(--red);">150</span>
+          </div>
+        </div>
+        <p class="logo-note" style="color:rgba(255,255,255,0.25);">Use on dark surfaces</p>
+      </div>
+
+      <!-- Mark only -->
+      <div class="logo-box" style="background:var(--red);">
+        <div>
+          <div class="logo-box-label" style="color:rgba(255,255,255,0.5);">Mark Only · Red Background</div>
+          <div class="logo-mark" style="margin-top:0.5rem;">
+            <span class="lm-150" style="font-size:3rem; color:#fff;">150</span>
+          </div>
+        </div>
+        <p class="logo-note" style="color:rgba(255,255,255,0.4);">Icon / avatar / favicon use</p>
+      </div>
+
+    </div>
+
+    <div style="background:var(--cream-dark); border-radius:12px; padding:1.5rem 1.8rem; border-left:3px solid var(--red);">
+      <p style="font-size:0.88rem; color:var(--ink-mid); line-height:1.8;">
+        <strong>Logo Rule:</strong>
+        The "150" in the logo is <strong>always red (#e30613)</strong> — on every background, in every context.
+        It is the only element in the brand that uses red. Do not apply red to any other element.
+        "Project" is always in uppercase Inter 800, spaced at 0.12em letter-spacing.
+        "150" is always in Playfair Display Italic 700.
+      </p>
+    </div>
+
+    <!-- ── 02 COLORS ── -->
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <h2 class="section-title">Color Palette</h2>
+    </div>
+
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#e30613;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Logo Red</span>
+          <span class="swatch-hex">#E30613</span>
+          <span class="swatch-use">Logo "150" only. Never use elsewhere.</span>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#0f1117;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Ink</span>
+          <span class="swatch-hex">#0F1117</span>
+          <span class="swatch-use">Primary text, dark cards, footer</span>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#faf7f2; border-bottom:1px solid var(--border);"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Cream</span>
+          <span class="swatch-hex">#FAF7F2</span>
+          <span class="swatch-use">Page background. Warm, not pure white.</span>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#f0ebe1;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Cream Dark</span>
+          <span class="swatch-hex">#F0EBE1</span>
+          <span class="swatch-use">Card backgrounds, subtle surfaces</span>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#9a7a2e;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Gold</span>
+          <span class="swatch-hex">#9A7A2E</span>
+          <span class="swatch-use">Accent text, eyebrow labels</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-grid" style="grid-template-columns: repeat(4,1fr);">
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#2d3142;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Ink Mid</span>
+          <span class="swatch-hex">#2D3142</span>
+          <span class="swatch-use">Body text, paragraphs</span>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#5c6070;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Ink Light</span>
+          <span class="swatch-hex">#5C6070</span>
+          <span class="swatch-use">Secondary text, captions</span>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#9098a8;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Ink Faint</span>
+          <span class="swatch-hex">#9098A8</span>
+          <span class="swatch-use">Placeholders, metadata</span>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#e8e2d9;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Paper</span>
+          <span class="swatch-hex">#E8E2D9</span>
+          <span class="swatch-use">Dividers, borders, paper tone</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 03 TYPOGRAPHY ── -->
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <h2 class="section-title">Typography</h2>
+    </div>
+
+    <div class="type-row">
+      <div>
+        <div class="type-label">Display / Headings</div>
+        <div class="type-meta">Playfair Display<br />Weight: 700<br />Google Fonts</div>
+      </div>
+      <div>
+        <div style="font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3.8rem); font-weight:700; line-height:1.1; letter-spacing:-0.02em; color:var(--ink);">
+          Our Family's<br /><em style="color:var(--red);">150-Year</em> Journey
+        </div>
+        <p style="font-size:0.78rem; color:var(--ink-faint); margin-top:0.6rem;">Use for h1 page titles, pull quotes, and the logo "150" mark. Italic for emotional emphasis.</p>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div>
+        <div class="type-label">UI / Body</div>
+        <div class="type-meta">Inter<br />Weight: 400 / 600 / 800<br />Google Fonts</div>
+      </div>
+      <div>
+        <div style="display:grid; gap:0.8rem;">
+          <div style="font-family:'Inter',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--red);">EYEBROW LABEL — INTER 700, 0.2em SPACING</div>
+          <div style="font-family:'Inter',sans-serif; font-size:1rem; font-weight:700; color:var(--ink);">Section headings and card titles in Inter 700</div>
+          <div style="font-family:'Inter',sans-serif; font-size:0.95rem; font-weight:400; color:var(--ink-mid); line-height:1.8;">Body text in Inter 400. Clean, readable, never cramped. Line height 1.75–1.9 for comfort.</div>
+          <div style="font-family:'Inter',sans-serif; font-size:0.82rem; font-weight:400; color:var(--ink-faint);">Captions and metadata in Inter 400 at 0.82rem</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-row" style="border-bottom:none;">
+      <div>
+        <div class="type-label">Numbers / Stats</div>
+        <div class="type-meta">Playfair Display<br />Weight: 700<br />4–8rem size</div>
+      </div>
+      <div style="display:flex; gap:3rem; flex-wrap:wrap; align-items:flex-end;">
+        <div>
+          <span style="font-family:'Playfair Display',serif; font-size:5rem; font-weight:700; color:var(--red); line-height:1; letter-spacing:-0.04em; display:block;">74</span>
+          <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint);">Father</span>
+        </div>
+        <div>
+          <span style="font-family:'Playfair Display',serif; font-size:5rem; font-weight:700; color:var(--ink); line-height:1; letter-spacing:-0.04em; display:block;">66</span>
+          <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint);">Mother</span>
+        </div>
+        <div>
+          <span style="font-family:'Playfair Display',serif; font-size:5rem; font-weight:700; color:var(--red); line-height:1; letter-spacing:-0.04em; display:block;">150</span>
+          <span style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint);">Goal</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 04 TAGLINES ── -->
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <h2 class="section-title">Taglines</h2>
+    </div>
+
+    <div class="tagline-list">
+      <div class="tagline-item">
+        <span class="tagline-text">Our Family's 150-Year Journey</span>
+        <span class="tagline-badge primary">Primary</span>
+      </div>
+      <div class="tagline-item">
+        <span class="tagline-text">From Blood Reports to 150</span>
+        <span class="tagline-badge">Supporting</span>
+      </div>
+      <div class="tagline-item">
+        <span class="tagline-text">One Family. One Mission. 150 Years.</span>
+        <span class="tagline-badge">Supporting</span>
+      </div>
+      <div class="tagline-item">
+        <span class="tagline-text">Documenting the Real Path to Longevity</span>
+        <span class="tagline-badge">Supporting</span>
+      </div>
+      <div class="tagline-item">
+        <span class="tagline-text">Turning Parents' Reports into a Lifelong Mission</span>
+        <span class="tagline-badge">Supporting</span>
+      </div>
+    </div>
+
+    <!-- ── 05 VOICE ── -->
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <h2 class="section-title">Brand Voice</h2>
+    </div>
+
+    <div class="voice-grid">
+      <div class="voice-card" style="background:var(--ink);">
+        <div class="voice-title" style="color:rgba(255,255,255,0.35);">We Sound Like</div>
+        <div class="voice-item">
+          <div class="voice-dot" style="background:rgba(227,6,19,0.2); color:var(--red);">✦</div>
+          <span style="color:rgba(255,255,255,0.75);">Honest and direct — no fluff, no filler</span>
+        </div>
+        <div class="voice-item">
+          <div class="voice-dot" style="background:rgba(227,6,19,0.2); color:var(--red);">✦</div>
+          <span style="color:rgba(255,255,255,0.75);">Family-first — warm but not sentimental</span>
+        </div>
+        <div class="voice-item">
+          <div class="voice-dot" style="background:rgba(227,6,19,0.2); color:var(--red);">✦</div>
+          <span style="color:rgba(255,255,255,0.75);">Disciplined and purposeful — no excuses</span>
+        </div>
+        <div class="voice-item">
+          <div class="voice-dot" style="background:rgba(227,6,19,0.2); color:var(--red);">✦</div>
+          <span style="color:rgba(255,255,255,0.75);">Specific over vague — real numbers, real dates</span>
+        </div>
+        <div class="voice-item">
+          <div class="voice-dot" style="background:rgba(227,6,19,0.2); color:var(--red);">✦</div>
+          <span style="color:rgba(255,255,255,0.75);">Hopeful but grounded — never naive</span>
+        </div>
+      </div>
+
+      <div class="voice-card" style="background:var(--cream-dark);">
+        <div class="voice-title" style="color:var(--ink-faint);">We Never Sound Like</div>
+        <div class="voice-item">
+          <div class="voice-dot" style="background:rgba(15,17,23,0.08); color:var(--ink-faint);">✕</div>
+          <span>A wellness brand selling products or memberships</span>
+        </div>
+        <div class="voice-item">
+          <div class="voice-dot" style="background:rgba(15,17,23,0.08); color:var(--ink-faint);">✕</div>
+          <span>A motivational page with generic advice</span>
+        </div>
+        <div class="voice-item">
+          <div class="voice-dot" style="background:rgba(15,17,23,0.08); color:var(--ink-faint);">✕</div>
+          <span>A medical authority giving treatment instructions</span>
+        </div>
+        <div class="voice-item">
+          <div class="voice-dot" style="background:rgba(15,17,23,0.08); color:var(--ink-faint);">✕</div>
+          <span>Filtered or overly positive — hiding real setbacks</span>
+        </div>
+        <div class="voice-item">
+          <div class="voice-dot" style="background:rgba(15,17,23,0.08); color:var(--ink-faint);">✕</div>
+          <span>Dramatic or emotional for effect</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 06 USAGE RULES ── -->
+    <div class="section-header">
+      <div class="section-num">06</div>
+      <h2 class="section-title">Usage Rules</h2>
+    </div>
+
+    <div class="rules-grid">
+      <div class="rule-card" style="background:#fff;">
+        <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.15em; text-transform:uppercase; color:var(--red); margin-bottom:1.2rem;">✓ Always Do</div>
+        <div class="rule-item"><span style="color:var(--red); font-weight:700; flex-shrink:0;">→</span><span>Keep "150" in red (#E30613) everywhere it appears in the logo</span></div>
+        <div class="rule-item"><span style="color:var(--red); font-weight:700; flex-shrink:0;">→</span><span>Use Playfair Display italic for pull quotes and emotional headings</span></div>
+        <div class="rule-item"><span style="color:var(--red); font-weight:700; flex-shrink:0;">→</span><span>Keep backgrounds warm cream — never cold grey or pure white</span></div>
+        <div class="rule-item"><span style="color:var(--red); font-weight:700; flex-shrink:0;">→</span><span>Use real numbers, dates, and specifics in all content</span></div>
+        <div class="rule-item"><span style="color:var(--red); font-weight:700; flex-shrink:0;">→</span><span>Report setbacks as honestly as wins</span></div>
+      </div>
+
+      <div class="rule-card" style="background:var(--cream-dark);">
+        <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:1.2rem;">✕ Never Do</div>
+        <div class="rule-item"><span style="color:var(--ink-faint); font-weight:700; flex-shrink:0;">—</span><span>Add any selling, coaching, or membership language</span></div>
+        <div class="rule-item"><span style="color:var(--ink-faint); font-weight:700; flex-shrink:0;">—</span><span>Use red for anything other than the logo "150" mark</span></div>
+        <div class="rule-item"><span style="color:var(--ink-faint); font-weight:700; flex-shrink:0;">—</span><span>Use stock images — only real family photos or no photos</span></div>
+        <div class="rule-item"><span style="color:var(--ink-faint); font-weight:700; flex-shrink:0;">—</span><span>Make transformation claims or medical promises</span></div>
+        <div class="rule-item"><span style="color:var(--ink-faint); font-weight:700; flex-shrink:0;">—</span><span>Stretch, recolour, or rearrange the logo elements</span></div>
+      </div>
+    </div>
+
+    <!-- ── 07 VISUAL STYLE ── -->
+    <div class="section-header">
+      <div class="section-num">07</div>
+      <h2 class="section-title">Visual Style</h2>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-bottom:2rem;">
+      <div style="border-radius:12px; border:1px solid var(--border); padding:1.8rem; background:#fff;">
+        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--red); margin-bottom:0.8rem;">Theme</div>
+        <p style="font-size:0.9rem; color:var(--ink-mid); line-height:1.75; margin:0;">Warm editorial magazine. Light cream background. Not cold, not clinical. Feels like a premium print journal.</p>
+      </div>
+      <div style="border-radius:12px; border:1px solid var(--border); padding:1.8rem; background:#fff;">
+        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--red); margin-bottom:0.8rem;">Cards</div>
+        <p style="font-size:0.9rem; color:var(--ink-mid); line-height:1.75; margin:0;">Mix of white, cream, ink-black, and red cards. Variety creates visual contrast without needing photos. Subtle hover lift on each card.</p>
+      </div>
+      <div style="border-radius:12px; border:1px solid var(--border); padding:1.8rem; background:#fff;">
+        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--red); margin-bottom:0.8rem;">Photography</div>
+        <p style="font-size:0.9rem; color:var(--ink-mid); line-height:1.75; margin:0;">Real family photos only — parents walking, home meals, blood reports, cooking. Warm natural light. Never posed, never stock.</p>
+      </div>
+    </div>
+
+    <div style="background:var(--ink); border-radius:14px; padding:2.5rem; display:grid; grid-template-columns:1fr 1fr; gap:2.5rem;">
+      <div>
+        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:0.8rem;">Inspired By</div>
+        <div style="display:grid; gap:0.5rem;">
+          <div style="font-size:0.9rem; color:rgba(255,255,255,0.65);">Kinfolk Magazine — editorial warmth, family focus</div>
+          <div style="font-size:0.9rem; color:rgba(255,255,255,0.65);">The Athletic — sports journalism typography</div>
+          <div style="font-size:0.9rem; color:rgba(255,255,255,0.65);">Linear.app — bento grid structure, precision</div>
+          <div style="font-size:0.9rem; color:rgba(255,255,255,0.65);">Apple — one message per section, no waste</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:0.8rem;">Key Differentiator</div>
+        <p style="font-size:0.9rem; color:rgba(255,255,255,0.65); line-height:1.8; margin:0;">
+          Most health and wellness sites use dark themes, aggressive colors, or stock imagery. Project 150 uses warm cream,
+          editorial serif type, and real family content — making it immediately distinct and trustworthy.
+        </p>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- FOOTER -->
+  <div class="kit-footer">
+    <div class="kit-footer-logo">
+      <span class="fp">Project</span>
+      <span class="f150">150</span>
+    </div>
+    <p>Brand Kit · May 2026 · One Family. One Mission. 150 Years.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What We Eat | Project 150</title>
+  <meta name="description" content="Simple home food, strict consistency. The Project 150 daily meal structure and grocery list." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-project">Project</span>
+        <span class="brand-150">150</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="journey.html">The Journey</a></li>
+          <li><a class="active" href="what-we-eat.html">What We Eat</a></li>
+          <li><a href="learnings.html">Learnings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <div class="page-hero fade-up">
+        <span class="eyebrow">What We Eat</span>
+        <h1>Simple Food.<br /><em style="font-style:italic; color:var(--red);">Strict Consistency.</em></h1>
+        <p class="page-sub">Traditional Telugu home cooking. Controlled portions. Fixed timings. No special diets required.</p>
+      </div>
+
+      <!-- DAILY STRUCTURE -->
+      <section class="card fade-up d1">
+        <span class="eyebrow">A Day on Our Plates</span>
+        <div class="meal-row">
+          <div class="meal-time">Morning</div>
+          <p>Warm water on waking. Light breakfast — egg or sprouts with a small whole grain serving. No sugar, no packaged food.</p>
+        </div>
+        <div class="meal-row">
+          <div class="meal-time">Lunch</div>
+          <p>Largest meal of the day. Vegetable curry + dal + controlled portion of rice or two small rotis. Curd on the side. No fried items.</p>
+        </div>
+        <div class="meal-row">
+          <div class="meal-time">Evening</div>
+          <p>A small handful of mixed nuts, one seasonal fruit, or a glass of buttermilk. Nothing else.</p>
+        </div>
+        <div class="meal-row">
+          <div class="meal-time">Dinner</div>
+          <p>Lightest meal. Vegetable soup or a small plate. No rice at night. Done by 7:30 PM wherever possible.</p>
+        </div>
+      </section>
+
+      <!-- RULES + GROCERY -->
+      <section class="section grid-2 fade-up d2">
+
+        <div class="card">
+          <span class="eyebrow">House Rules</span>
+          <div class="rule-strip"></div>
+          <div class="check-list">
+            <div class="check-item"><div class="check-dot"></div><span>No sugary drinks — ever</span></div>
+            <div class="check-item"><div class="check-dot"></div><span>No packaged snacks kept in the house</span></div>
+            <div class="check-item"><div class="check-dot"></div><span>Fixed meal times, every single day</span></div>
+            <div class="check-item"><div class="check-dot"></div><span>Protein and fiber in every major meal</span></div>
+            <div class="check-item"><div class="check-dot"></div><span>Minimum 8 glasses of water daily</span></div>
+          </div>
+        </div>
+
+        <div class="card card-cream">
+          <span class="eyebrow">Monthly Kitchen List · Telugu + English</span>
+          <div class="rule-strip"></div>
+          <div style="display:grid; gap:1.1rem;">
+            <div>
+              <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem;">Vegetables · కూరగాయలు</div>
+              <p class="muted" style="font-size:0.9rem; margin:0;">Aaku kooralu, sorakaya, carrot, beans, cabbage, tomato, cucumber</p>
+            </div>
+            <div>
+              <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem;">Proteins · ప్రోటీన్</div>
+              <p class="muted" style="font-size:0.9rem; margin:0;">Pappu, pesalu, senagalu, eggs, perugu (fresh curd)</p>
+            </div>
+            <div>
+              <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem;">Grains · ధాన్యాలు</div>
+              <p class="muted" style="font-size:0.9rem; margin:0;">Brown rice (controlled), whole wheat flour, ragi where possible</p>
+            </div>
+            <div>
+              <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem;">Add-ons</div>
+              <p class="muted" style="font-size:0.9rem; margin:0;">Nuts, flax seeds, lemon, ginger, garlic, turmeric, seasonal fruit</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- VEGETABLES TO AVOID -->
+      <section class="section fade-up">
+        <span class="eyebrow">Vegetables to Avoid</span>
+        <p style="color:var(--ink-light); font-size:0.95rem; margin:0.5rem 0 1.5rem; max-width:58ch;">
+          These vegetables spike blood sugar quickly due to high starch or natural sugar content.
+          We avoid them completely or eat only very rarely, in tiny amounts.
+        </p>
+        <div style="border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 8px 32px rgba(15,17,23,0.08);">
+          <img
+            src="vegetables-to-avoid.png"
+            alt="Project 150 — Vegetables to Avoid: a bilingual Telugu-English guide listing high-starch vegetables that spike blood sugar"
+            style="width:100%; display:block;"
+          />
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="fp">Project</span>
+        <span class="f150">150</span>
+      </div>
+      <span class="footer-copy">Food discipline is daily medicine.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
