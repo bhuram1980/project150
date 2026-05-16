@@ -60,3 +60,40 @@ const statObs=new IntersectionObserver(entries=>{
   });
 },{threshold:0.5});
 statNums.forEach(el=>statObs.observe(el));
+
+// Image lightbox for recipe/infographic assets
+const lightbox = document.getElementById('image-lightbox');
+const lightboxImg = document.getElementById('lightbox-image');
+const lightboxClose = document.getElementById('lightbox-close');
+const zoomables = document.querySelectorAll('img[data-lightbox="true"]');
+
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+if (lightbox && lightboxImg) {
+  zoomables.forEach((img) => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt || 'Expanded image';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+}
