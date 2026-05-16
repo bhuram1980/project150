@@ -4,142 +4,204 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Journey | Project 150</title>
-  <meta name="description" content="A transparent, dated log of the Project 150 family health mission." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <meta name="description" content="A transparent, dated log of everything we're doing — walks, food, blood markers, sleep. Updated weekly. No filters." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Project 150" />
+  <meta property="og:title" content="The Journey | Project 150" />
+  <meta property="og:description" content="A transparent, dated log of everything we're doing — walks, food, blood markers, sleep. Updated weekly. No filters." />
+  <meta property="og:url" content="https://project150.in/journey.html" />
+  <meta property="og:image" content="https://project150.in/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Journey | Project 150" />
+  <meta name="twitter:description" content="A transparent, dated log of everything we're doing — walks, food, blood markers, sleep. Updated weekly. No filters." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <header>
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-project">Project</span>
-        <span class="brand-150">150</span>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="our-story.html">Our Story</a></li>
-          <li><a class="active" href="journey.html">The Journey</a></li>
-          <li><a href="what-we-eat.html">What We Eat</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="learnings.html">Learnings</a></li>
-        </ul>
-      </nav>
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="/index.html" class="nav-logo">Project <span>150</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/our-story.html">Our Story</a></li>
+        <li><a href="/journey.html">The Journey</a></li>
+        <li><a href="/what-we-eat.html">What We Eat</a></li>
+        <li><a href="/recipes.html">Recipes</a></li>
+        <li><a href="/learnings.html">Learnings</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <main>
-    <div class="container">
+  <div class="container">
+    <main>
+      <section class="journey-section">
+        <div class="section-eyebrow">The journey so far</div>
+        <h1>Real Progress. <em>No Filter.</em></h1>
+        <p class="journey-subtitle">Updated weekly. Nothing is edited for good optics. What happened, happened.</p>
 
-      <div class="page-hero fade-up">
-        <span class="eyebrow">The Journey</span>
-        <h1>Real Progress.<br /><em style="font-style:italic; color:var(--red);">No Filter.</em></h1>
-        <p class="page-sub">Updated weekly. Nothing is edited for good optics. What happened, happened.</p>
-      </div>
-
-      <!-- TIMELINE -->
-      <section class="fade-up d1">
         <div class="timeline">
-
-          <div class="tl-item">
-            <div class="tl-date">May 2026<br />Week 1</div>
-            <div class="tl-body">
+          <div class="timeline-item completed">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">May 2026 — Week 1</div>
               <h3>Baseline Established</h3>
-              <p>
-                Reviewed blood reports from Tata 1mg and GVK Diagnostics.
-                Documented all current markers — sugar, iron, Vitamin D, and BP.
-                Built a simple daily tracking sheet. Starting from zero.
-              </p>
+              <p>Reviewed blood reports from Tata 1mg and GVK Diagnostics. Documented all current markers — sugar, iron, Vitamin D, and BP. Built a simple daily tracking sheet. Starting from zero.</p>
             </div>
           </div>
 
-          <div class="tl-item">
-            <div class="tl-date">May 2026<br />Week 2</div>
-            <div class="tl-body">
+          <div class="timeline-item completed">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">May 2026 — Week 2</div>
               <h3>First Rules Locked In</h3>
-              <p>
-                Morning walk locked at 25 minutes minimum, every day without exception.
-                All packaged food and added sugar removed from the house.
-                Meal timings fixed for all three meals.
-              </p>
+              <p>Morning walk locked at 25 minutes minimum, every day without exception. All packaged food and added sugar removed from the house. Meal timings fixed for all three meals.</p>
             </div>
           </div>
 
-          <div class="tl-item">
-            <div class="tl-date">May 2026<br />Week 3</div>
-            <div class="tl-body">
+          <div class="timeline-item completed">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">May 2026 — Week 3</div>
               <h3>Systems Added</h3>
-              <p>
-                Medication alarm set — never missed again.
-                Water intake tracked daily.
-                Bedtime made consistent. Direct link noticed between sleep and morning energy.
-              </p>
+              <p>Medication alarm set — never missed again. Water intake tracked daily. Bedtime made consistent. Direct link noticed between sleep and morning energy.</p>
             </div>
           </div>
 
-          <div class="tl-item">
-            <div class="tl-date">May 2026<br />Week 4</div>
-            <div class="tl-body">
+          <div class="timeline-item completed">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">May 2026 — Week 4</div>
               <h3>First Signals</h3>
-              <p>
-                Noticeably better morning alertness. Walks extended to 35 minutes naturally.
-                Plate discipline held strong all week. Doctor follow-up booked for June.
-              </p>
+              <p>Noticeably better morning alertness. Walks extended to 35 minutes naturally. Plate discipline held strong all week. Doctor follow-up booked for June.</p>
             </div>
           </div>
 
-          <div class="tl-item upcoming">
-            <div class="tl-date">June 2026</div>
-            <div class="tl-body">
-              <h3>Upcoming — First Follow-Up Blood Test</h3>
-              <p>
-                Results will be shared here exactly as they come. Good or bad.
-              </p>
+          <div class="timeline-item upcoming">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
             </div>
-          </div>
-
-        </div>
-      </section>
-
-      <div class="divider"></div>
-
-      <!-- WHAT WE TRACK -->
-      <section class="fade-up d2">
-        <span class="eyebrow">What We Track</span>
-        <div class="grid-2" style="margin-top:1rem;">
-          <div class="card card-cream">
-            <div class="check-list">
-              <div class="check-item"><div class="check-dot"></div><span>Blood markers — every checkup, reported as-is</span></div>
-              <div class="check-item"><div class="check-dot"></div><span>Daily walk — minutes and energy notes</span></div>
-              <div class="check-item"><div class="check-dot"></div><span>Meal quality and sugar discipline</span></div>
-            </div>
-          </div>
-          <div class="card card-cream">
-            <div class="check-list">
-              <div class="check-item"><div class="check-dot"></div><span>Medication — timing and adherence</span></div>
-              <div class="check-item"><div class="check-dot"></div><span>Sleep timing consistency</span></div>
-              <div class="check-item"><div class="check-dot"></div><span>Weekly notes — wins, failures, adjustments</span></div>
+            <div class="timeline-content">
+              <div class="timeline-date">June 2026 — Upcoming</div>
+              <h3>First Follow-Up Blood Test</h3>
+              <p>Results will be shared here exactly as they come. Good or bad.</p>
+              <div class="upcoming-badge">Results pending</div>
             </div>
           </div>
         </div>
       </section>
 
-    </div>
-  </main>
+      <section class="tracking-section">
+        <div class="section-eyebrow">What we track</div>
+        <div class="tracking-grid">
+          <div class="tracking-item">
+            <div class="tracking-icon">🩸</div>
+            <div class="tracking-label">Blood markers</div>
+            <div class="tracking-desc">Every checkup, reported as-is</div>
+          </div>
+          <div class="tracking-item">
+            <div class="tracking-icon">🚶</div>
+            <div class="tracking-label">Daily walk</div>
+            <div class="tracking-desc">Minutes and energy notes</div>
+          </div>
+          <div class="tracking-item">
+            <div class="tracking-icon">🥗</div>
+            <div class="tracking-label">Meal quality</div>
+            <div class="tracking-desc">Sugar discipline and plate choices</div>
+          </div>
+          <div class="tracking-item">
+            <div class="tracking-icon">💊</div>
+            <div class="tracking-label">Medication</div>
+            <div class="tracking-desc">Timing and adherence, daily</div>
+          </div>
+          <div class="tracking-item">
+            <div class="tracking-icon">😴</div>
+            <div class="tracking-label">Sleep timing</div>
+            <div class="tracking-desc">Consistency and its effects</div>
+          </div>
+          <div class="tracking-item">
+            <div class="tracking-icon">📝</div>
+            <div class="tracking-label">Weekly notes</div>
+            <div class="tracking-desc">Wins, failures, adjustments</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="fp">Project</span>
-        <span class="f150">150</span>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <p class="footer-logo">Project <span>150</span></p>
+          <p class="footer-tagline">One family. One mission. 150 years of healthy, independent life.</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="/index.html">Home</a>
+          <a href="/our-story.html">Our Story</a>
+          <a href="/journey.html">The Journey</a>
+          <a href="/what-we-eat.html">What We Eat</a>
+          <a href="/recipes.html">Recipes</a>
+          <a href="/learnings.html">Learnings</a>
+        </nav>
       </div>
-      <span class="footer-copy">Documenting the real path to longevity.</span>
+      <div class="footer-bottom">
+        <p>Project 150 · Hyderabad, India · Est. May 2026</p>
+        <p>A private family mission, shared publicly. No products. No coaching. Just the truth.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="main.js" defer></script>
+  <script>
+    const nav = document.getElementById('site-nav');
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    toggle?.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+
+    // Mark active nav link
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      if (a.getAttribute('href') === currentPath || a.getAttribute('href') === currentPath.split('/').pop()) {
+        a.classList.add('active');
+      }
+      if (currentPath === '/' && a.getAttribute('href') === '/index.html') {
+        a.classList.add('active');
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section, .timeline-item, .person-card, .tracking-item, .report-item').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>

@@ -4,139 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Story | Project 150</title>
-  <meta name="description" content="How blood reports became the beginning of a family's lifelong health mission." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <meta name="description" content="How a set of blood reports in May 2026 became the starting point of a family's lifelong health mission." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Project 150" />
+  <meta property="og:title" content="Our Story | Project 150" />
+  <meta property="og:description" content="How a set of blood reports in May 2026 became the starting point of a family's lifelong health mission." />
+  <meta property="og:url" content="https://project150.in/our-story.html" />
+  <meta property="og:image" content="https://project150.in/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Story | Project 150" />
+  <meta name="twitter:description" content="How a set of blood reports in May 2026 became the starting point of a family's lifelong health mission." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <header>
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-project">Project</span>
-        <span class="brand-150">150</span>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="our-story.html">Our Story</a></li>
-          <li><a href="journey.html">The Journey</a></li>
-          <li><a href="what-we-eat.html">What We Eat</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="learnings.html">Learnings</a></li>
-        </ul>
-      </nav>
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="/index.html" class="nav-logo">Project <span>150</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/our-story.html">Our Story</a></li>
+        <li><a href="/journey.html">The Journey</a></li>
+        <li><a href="/what-we-eat.html">What We Eat</a></li>
+        <li><a href="/recipes.html">Recipes</a></li>
+        <li><a href="/learnings.html">Learnings</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <main>
-    <div class="container">
+  <div class="container">
+    <main>
+      <section class="page-hero">
+        <div class="section-eyebrow">Our story</div>
+        <h1>From Blood Reports to <em>150</em></h1>
+        <p class="page-subtitle">The true origin of a family mission that started with a set of numbers we refused to accept.</p>
+      </section>
 
-      <div class="page-hero fade-up">
-        <span class="eyebrow">Our Story</span>
-        <h1>From Blood<br />Reports to <em style="font-style:italic; color:var(--red);">150</em></h1>
-        <p class="page-sub">The true origin of a family mission that started with a set of numbers we refused to accept.</p>
-      </div>
+      <section>
+        <p>In May 2026, I sat down with my father's and mother's blood reports from Tata 1mg and GVK Diagnostics. My father is 74. My mother is 66.</p>
+        <p>High blood sugar. Low iron. Low Vitamin D. Heart risk indicators. These were not abstract medical codes. These were warning signs about people I love.</p>
+        <p>We had two paths. Accept this as inevitable aging and manage decline, or build a real daily system and fight back together.</p>
+        <p>We chose to fight. Strict food discipline. Morning walks every day. Medicines on time. Better sleep. Honest tracking.</p>
 
-      <!-- STORY IN TWO COLUMNS -->
-      <section class="fade-up d1" style="display:grid; grid-template-columns:1fr 340px; gap:4rem; align-items:start;">
+        <blockquote class="story-quote">
+          <p>"That is Project 150. A family health journal. Nothing more, nothing less."</p>
+        </blockquote>
 
-        <!-- Main prose -->
+        <div class="truth-pills">
+          <span class="truth-pill">No coaching</span>
+          <span class="truth-pill">No products</span>
+          <span class="truth-pill">No memberships</span>
+          <span class="truth-pill highlight">Just the truth</span>
+        </div>
+
+        <p>If our journey helps one more family begin theirs, this mission is worth it.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
         <div>
-          <p style="font-size:1.12rem; line-height:1.9; color:var(--ink-mid); margin-bottom:1.4rem;">
-            In May 2026, I sat down with my father's and mother's blood reports —
-            from Tata 1mg and GVK Diagnostics. My father is 74. My mother is 66.
-          </p>
-
-          <div class="report-box">
-            🔴 &nbsp;<strong>High blood sugar</strong> &nbsp;·&nbsp;
-            🟡 &nbsp;<strong>Low iron</strong> &nbsp;·&nbsp;
-            🟡 &nbsp;<strong>Low Vitamin D</strong> &nbsp;·&nbsp;
-            🔴 &nbsp;<strong>Heart risk indicators</strong>
-          </div>
-
-          <p style="font-size:1.05rem; line-height:1.9; color:var(--ink-mid); margin-bottom:1.4rem;">
-            These were not abstract medical codes. These were warning signs about people I love.
-            The kind of numbers that could quietly take years away from their life if ignored.
-          </p>
-
-          <p style="font-size:1.05rem; line-height:1.9; color:var(--ink-mid); margin-bottom:1.4rem;">
-            We had two paths. Accept it as inevitable aging — manage the decline, wait for the next bad report.
-            Or build a real, daily system and fight back together.
-          </p>
-
-          <p style="font-size:1.05rem; line-height:1.9; color:var(--ink-mid); margin-bottom:2rem;">
-            We chose to fight. Strict food discipline. Morning walks every single day. Medicines taken on time.
-            Sleep made consistent. And we chose to document all of it — honestly, publicly — so other families
-            could see what the real path looks like, not just the highlight reel.
-          </p>
-
-          <p class="pull-quote">
-            "That is Project 150.<br />A family health journal.<br /><em>Nothing more, nothing less.</em>"
-          </p>
-
-          <div class="tag-strip" style="margin-top:2rem;">
-            <span class="pill">No coaching</span>
-            <span class="pill">No products</span>
-            <span class="pill">No memberships</span>
-            <span class="pill pill-red">Just the truth</span>
-          </div>
+          <p class="footer-logo">Project <span>150</span></p>
+          <p class="footer-tagline">One family. One mission. 150 years of healthy, independent life.</p>
         </div>
-
-        <!-- Side column -->
-        <div style="display:grid; gap:1rem; position:sticky; top:100px;">
-          <div class="card card-ink">
-            <span class="eyebrow" style="color:rgba(255,255,255,0.4);">The People</span>
-            <div style="margin-top:0.5rem;">
-              <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.8rem 0; border-bottom:1px solid rgba(255,255,255,0.08);">
-                <span style="color:rgba(255,255,255,0.6); font-size:0.9rem;">Father</span>
-                <span class="giant-num giant-num-ink" style="font-size:3rem;">74</span>
-              </div>
-              <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.8rem 0;">
-                <span style="color:rgba(255,255,255,0.6); font-size:0.9rem;">Mother</span>
-                <span class="giant-num giant-num-ink" style="font-size:3rem;">66</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card card-red">
-            <span class="eyebrow">The Goal</span>
-            <span class="giant-num" style="color:#fff; font-size:5rem;">150</span>
-            <p style="color:rgba(255,255,255,0.7); font-size:0.88rem; margin:0.5rem 0 0; line-height:1.6;">
-              Healthy, independent years — together.
-            </p>
-          </div>
-
-          <div class="card card-cream">
-            <p style="font-size:0.88rem; color:var(--ink-light); line-height:1.7; margin:0;">
-              If our journey helps one more family begin theirs — this mission is worth it.
-            </p>
-          </div>
-        </div>
-
-      </section>
-
-      <div class="divider"></div>
-
-      <section class="fade-up" style="text-align:center; padding:2rem 0 1rem;">
-        <a href="journey.html" class="btn btn-red">Follow the journey →</a>
-      </section>
-
-    </div>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="fp">Project</span>
-        <span class="f150">150</span>
+        <nav class="footer-nav">
+          <a href="/index.html">Home</a>
+          <a href="/our-story.html">Our Story</a>
+          <a href="/journey.html">The Journey</a>
+          <a href="/what-we-eat.html">What We Eat</a>
+          <a href="/recipes.html">Recipes</a>
+          <a href="/learnings.html">Learnings</a>
+        </nav>
       </div>
-      <span class="footer-copy">Turning warning signs into a lifelong mission.</span>
+      <div class="footer-bottom">
+        <p>Project 150 · Hyderabad, India · Est. May 2026</p>
+        <p>A private family mission, shared publicly. No products. No coaching. Just the truth.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="main.js" defer></script>
+  <script>
+    const nav = document.getElementById('site-nav');
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    toggle?.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+
+    // Mark active nav link
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      if (a.getAttribute('href') === currentPath || a.getAttribute('href') === currentPath.split('/').pop()) {
+        a.classList.add('active');
+      }
+      if (currentPath === '/' && a.getAttribute('href') === '/index.html') {
+        a.classList.add('active');
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section, .timeline-item, .person-card, .tracking-item, .report-item').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>

@@ -5,229 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What We Eat | Project 150</title>
   <meta name="description" content="Simple home food, strict consistency. The Project 150 daily meal structure and grocery list." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Project 150" />
+  <meta property="og:title" content="What We Eat | Project 150" />
+  <meta property="og:description" content="Simple home food, strict consistency. The Project 150 daily meal structure and grocery list." />
+  <meta property="og:url" content="https://project150.in/what-we-eat.html" />
+  <meta property="og:image" content="https://project150.in/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What We Eat | Project 150" />
+  <meta name="twitter:description" content="Simple home food, strict consistency. The Project 150 daily meal structure and grocery list." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <header>
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-project">Project</span>
-        <span class="brand-150">150</span>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="our-story.html">Our Story</a></li>
-          <li><a href="journey.html">The Journey</a></li>
-          <li><a class="active" href="what-we-eat.html">What We Eat</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="learnings.html">Learnings</a></li>
-        </ul>
-      </nav>
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="/index.html" class="nav-logo">Project <span>150</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/our-story.html">Our Story</a></li>
+        <li><a href="/journey.html">The Journey</a></li>
+        <li><a href="/what-we-eat.html">What We Eat</a></li>
+        <li><a href="/recipes.html">Recipes</a></li>
+        <li><a href="/learnings.html">Learnings</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <main>
-    <div class="container">
-
-      <div class="page-hero fade-up">
-        <span class="eyebrow">What We Eat</span>
-        <h1>Simple Food.<br /><em style="font-style:italic; color:var(--red);">Strict Consistency.</em></h1>
-        <p class="page-sub">Traditional Telugu home cooking. Controlled portions. Fixed timings. No special diets required.</p>
-      </div>
-
-      <!-- DAILY STRUCTURE -->
-      <section class="card fade-up d1">
-        <span class="eyebrow">A Day on Our Plates</span>
-        <div class="meal-row">
-          <div class="meal-time">Morning</div>
-          <p>Warm water on waking. Light breakfast — egg or sprouts with a small whole grain serving. No sugar, no packaged food.</p>
-        </div>
-        <div class="meal-row">
-          <div class="meal-time">Lunch</div>
-          <p>Largest meal of the day. Vegetable curry + dal + controlled portion of rice or two small rotis. Curd on the side. No fried items.</p>
-        </div>
-        <div class="meal-row">
-          <div class="meal-time">Evening</div>
-          <p>A small handful of mixed nuts, one seasonal fruit, or a glass of buttermilk. Nothing else.</p>
-        </div>
-        <div class="meal-row">
-          <div class="meal-time">Dinner</div>
-          <p>Lightest meal. Vegetable soup or a small plate. No rice at night. Done by 7:30 PM wherever possible.</p>
-        </div>
+  <div class="container">
+    <main>
+      <section class="page-hero">
+        <div class="section-eyebrow">What we eat</div>
+        <h1>Simple Food. <em>Strict Consistency.</em></h1>
+        <p class="page-subtitle">Traditional Telugu home cooking. Controlled portions. Fixed timings. No special diets required.</p>
       </section>
 
-      <!-- FEATURED RECIPE -->
-      <section class="section fade-up d1">
-        <div style="border-bottom:2px solid var(--ink); padding-bottom:0.6rem; margin-bottom:2rem; display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
-          <h2 style="font-size:1.5rem;">Featured <em style="color:var(--red); font-style:italic;">Recipe</em></h2>
-          <span style="font-size:0.78rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint);">Family style · High protein · Controlled portions</span>
-        </div>
+      <section class="card">
+        <div class="section-eyebrow">A day on our plates</div>
+        <div class="meal-row"><div class="meal-time">Morning</div><p>Warm water. Light breakfast with protein and fiber.</p></div>
+        <div class="meal-row"><div class="meal-time">Lunch</div><p>Largest meal: vegetables + dal + controlled grains.</p></div>
+        <div class="meal-row"><div class="meal-time">Evening</div><p>Light snack only: nuts, fruit, or buttermilk.</p></div>
+        <div class="meal-row"><div class="meal-time">Dinner</div><p>Lightest meal. Early timing and minimal starch.</p></div>
+      </section>
+
+      <section>
+        <div class="section-eyebrow">Visual guides</div>
         <div class="grid-2">
           <div class="image-frame">
             <picture>
               <source srcset="assets/images/recipes/mutton-pepper-fry-recipe-telugu.webp" type="image/webp" />
-              <img src="assets/images/recipes/mutton-pepper-fry-recipe-telugu.png" alt="Project 150 featured recipe card in Telugu for mutton pepper fry style dish with ingredients and method" loading="lazy" decoding="async" data-lightbox="true" />
+              <img src="assets/images/recipes/mutton-pepper-fry-recipe-telugu.png" alt="Featured Telugu recipe chart" loading="lazy" decoding="async" data-lightbox="true" />
             </picture>
           </div>
-          <div class="card card-cream">
-            <span class="eyebrow">How We Use It</span>
-            <p class="muted" style="font-size:0.95rem; line-height:1.8; margin-bottom:1rem;">
-              This is a practical home recipe visual we use for family meal prep. We keep portions disciplined, pair it with vegetables, and avoid heavy oils.
-            </p>
-            <div class="check-list">
-              <div class="check-item"><div class="check-dot"></div><span>Cook in small family batch sizes</span></div>
-              <div class="check-item"><div class="check-dot"></div><span>Use controlled oil and salt</span></div>
-              <div class="check-item"><div class="check-dot"></div><span>Serve with fiber-rich vegetables, not heavy carbs</span></div>
-              <div class="check-item"><div class="check-dot"></div><span>Best used in daytime meals, not late dinner</span></div>
-            </div>
+          <div class="image-frame">
+            <picture>
+              <source srcset="assets/images/infographics/foods-to-avoid.webp" type="image/webp" />
+              <img src="assets/images/infographics/foods-to-avoid.png" alt="Foods to avoid guide" loading="lazy" decoding="async" data-lightbox="true" />
+            </picture>
           </div>
         </div>
       </section>
-
-      <!-- RULES + GROCERY -->
-      <section class="section grid-2 fade-up d2">
-
-        <div class="card">
-          <span class="eyebrow">House Rules</span>
-          <div class="rule-strip"></div>
-          <div class="check-list">
-            <div class="check-item"><div class="check-dot"></div><span>No sugary drinks — ever</span></div>
-            <div class="check-item"><div class="check-dot"></div><span>No packaged snacks kept in the house</span></div>
-            <div class="check-item"><div class="check-dot"></div><span>Fixed meal times, every single day</span></div>
-            <div class="check-item"><div class="check-dot"></div><span>Protein and fiber in every major meal</span></div>
-            <div class="check-item"><div class="check-dot"></div><span>Minimum 8 glasses of water daily</span></div>
-          </div>
-        </div>
-
-        <div class="card card-cream">
-          <span class="eyebrow">Monthly Kitchen List · Telugu + English</span>
-          <div class="rule-strip"></div>
-          <div style="display:grid; gap:1.1rem;">
-            <div>
-              <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem;">Vegetables · కూరగాయలు</div>
-              <p class="muted" style="font-size:0.9rem; margin:0;">Aaku kooralu, sorakaya, carrot, beans, cabbage, tomato, cucumber</p>
-            </div>
-            <div>
-              <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem;">Proteins · ప్రోటీన్</div>
-              <p class="muted" style="font-size:0.9rem; margin:0;">Pappu, pesalu, senagalu, eggs, perugu (fresh curd)</p>
-            </div>
-            <div>
-              <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem;">Grains · ధాన్యాలు</div>
-              <p class="muted" style="font-size:0.9rem; margin:0;">Brown rice (controlled), whole wheat flour, ragi where possible</p>
-            </div>
-            <div>
-              <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); margin-bottom:0.3rem;">Add-ons</div>
-              <p class="muted" style="font-size:0.9rem; margin:0;">Nuts, flax seeds, lemon, ginger, garlic, turmeric, seasonal fruit</p>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <!-- FOODS ALLOWED -->
-      <section class="section fade-up">
-        <div style="border-bottom:2px solid var(--ink); padding-bottom:0.6rem; margin-bottom:2rem; display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
-          <h2 style="font-size:1.5rem;">Foods <em style="color:var(--red); font-style:italic;">Allowed</em></h2>
-          <span style="font-size:0.78rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint);">Strict Diabetes + Heart Diet</span>
-        </div>
-
-        <div style="display:grid; gap:1.25rem;">
-
-          <!-- Allowed Vegetables -->
-          <div>
-            <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">Section 1 — Vegetables</div>
-            <div class="image-frame">
-              <picture>
-                <source srcset="assets/images/infographics/allowed-vegetables.webp" type="image/webp" />
-                <img src="assets/images/infographics/allowed-vegetables.png" alt="Project 150 — Allowed Vegetables: bilingual Telugu-English guide to safe vegetables for diabetes and heart diet" loading="lazy" decoding="async" data-lightbox="true" />
-              </picture>
-            </div>
-          </div>
-
-          <!-- Allowed Grains -->
-          <div>
-            <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">Section 2 — Grains &amp; Millets</div>
-            <div class="image-frame">
-              <picture>
-                <source srcset="assets/images/infographics/allowed-grains.webp" type="image/webp" />
-                <img src="assets/images/infographics/allowed-grains.png" alt="Project 150 — Allowed Grains and Millets: Ragi, Jowar, Bajra, and more with Telugu names and portion sizes" loading="lazy" decoding="async" data-lightbox="true" />
-              </picture>
-            </div>
-          </div>
-
-          <!-- Allowed Dals & Protein -->
-          <div>
-            <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">Section 3 — Dals &amp; Protein</div>
-            <div class="image-frame">
-              <picture>
-                <source srcset="assets/images/infographics/allowed-dals-protein.webp" type="image/webp" />
-                <img src="assets/images/infographics/allowed-dals-protein.png" alt="Project 150 — Allowed Dals and Protein: Moong dal, Toor dal, eggs, fish, chicken with Telugu names and portions" loading="lazy" decoding="async" data-lightbox="true" />
-              </picture>
-            </div>
-          </div>
-
-          <!-- Fruits, Snacks, Drinks, Oils -->
-          <div>
-            <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">Sections 4–7 — Fruits · Snacks · Drinks · Oils</div>
-            <div class="image-frame">
-              <picture>
-                <source srcset="assets/images/infographics/allowed-oils-fruits-snacks-drinks.webp" type="image/webp" />
-                <img src="assets/images/infographics/allowed-oils-fruits-snacks-drinks.png" alt="Project 150 — Allowed Fruits, Snacks, Beverages and Cooking Oils with Telugu names and portion rules" loading="lazy" decoding="async" data-lightbox="true" />
-              </picture>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- FOODS TO AVOID -->
-      <section class="section fade-up">
-        <div style="border-bottom:2px solid var(--ink); padding-bottom:0.6rem; margin-bottom:2rem; display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
-          <h2 style="font-size:1.5rem;">Foods to <em style="color:var(--red); font-style:italic;">Avoid</em></h2>
-          <span style="font-size:0.78rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint);">Completely or very rarely, tiny amounts only</span>
-        </div>
-
-        <div style="display:grid; gap:1.25rem;">
-
-          <!-- Vegetables to Avoid -->
-          <div>
-            <div style="font-size:0.72rem; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--red); margin-bottom:0.75rem;">High-Starch Vegetables</div>
-            <div class="image-frame">
-              <picture>
-                <source srcset="assets/images/infographics/foods-to-avoid.webp" type="image/webp" />
-                <img src="assets/images/infographics/foods-to-avoid.png" alt="Project 150 — Vegetables to Avoid: Potato, Sweet Potato, Corn, and other high-starch vegetables that spike blood sugar" loading="lazy" decoding="async" data-lightbox="true" />
-              </picture>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-    </div>
-  </main>
+    </main>
+  </div>
 
   <div id="image-lightbox" class="lightbox" aria-hidden="true">
     <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
-    <div class="lightbox-content">
-      <img id="lightbox-image" src="" alt="" />
-    </div>
+    <div class="lightbox-content"><img id="lightbox-image" src="" alt="" /></div>
   </div>
 
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="fp">Project</span>
-        <span class="f150">150</span>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <p class="footer-logo">Project <span>150</span></p>
+          <p class="footer-tagline">One family. One mission. 150 years of healthy, independent life.</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="/index.html">Home</a>
+          <a href="/our-story.html">Our Story</a>
+          <a href="/journey.html">The Journey</a>
+          <a href="/what-we-eat.html">What We Eat</a>
+          <a href="/recipes.html">Recipes</a>
+          <a href="/learnings.html">Learnings</a>
+        </nav>
       </div>
-      <span class="footer-copy">Food discipline is daily medicine.</span>
+      <div class="footer-bottom">
+        <p>Project 150 · Hyderabad, India · Est. May 2026</p>
+        <p>A private family mission, shared publicly. No products. No coaching. Just the truth.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="main.js" defer></script>
+  <script>
+    const nav = document.getElementById('site-nav');
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    toggle?.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+
+    // Mark active nav link
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      if (a.getAttribute('href') === currentPath || a.getAttribute('href') === currentPath.split('/').pop()) {
+        a.classList.add('active');
+      }
+      if (currentPath === '/' && a.getAttribute('href') === '/index.html') {
+        a.classList.add('active');
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section, .timeline-item, .person-card, .tracking-item, .report-item').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = document.getElementById('lightbox-image');
+    const lightboxClose = document.getElementById('lightbox-close');
+    document.querySelectorAll('img[data-lightbox="true"]').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.currentSrc || img.src;
+        lightbox.classList.add('open');
+      });
+    });
+    lightboxClose?.addEventListener('click', () => lightbox.classList.remove('open'));
+    lightbox?.addEventListener('click', (e) => {
+      if (e.target === lightbox) lightbox.classList.remove('open');
+    });
+  </script>
 </body>
 </html>
