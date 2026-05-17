@@ -36,97 +36,44 @@
 
   <div class="container">
     <main>
-      <section class="page-hero">
-        <div class="section-eyebrow">Learnings</div>
-        <h1>What This Journey <em>Is Teaching Us</em></h1>
-        <p class="page-subtitle">Not expert opinions. Lived lessons — shared plainly so other families can start sooner.</p>
+      <section>
+        <div class="eyebrow">Learnings</div>
+        <h1>What this journey is teaching us.</h1>
+        <p class="hero-subtitle">No motivational fluff. Just lived experience from our home.</p>
       </section>
 
       <section class="grid-2">
-        <div class="card">
-          <div class="section-eyebrow">What works</div>
-          <h3>Consistency beats intensity.</h3>
-          <p>25 minutes walked every day beats 2 hours once a week. Every time.</p>
-          <h3>Family accountability works.</h3>
-          <p>When everyone changes together, no one has to resist alone.</p>
-          <h3>Simple food is sustainable food.</h3>
-          <p>Portion control and timing matter more than exotic diets.</p>
-          <h3>Walking is medicine.</h3>
-          <p>More daily impact than any single dietary change we've made.</p>
-        </div>
-        <div class="card">
-          <div class="section-eyebrow">Still improving</div>
-          <h3>Sleep timing is inconsistent.</h3>
-          <p>We know the target. Hitting it every night is harder than expected.</p>
-          <h3>Social events break discipline.</h3>
-          <p>Weddings, festivals, and family visits still disrupt routine.</p>
-          <h3>Report anxiety is real.</h3>
-          <p>We are learning to separate effort from outcome.</p>
-        </div>
+        <article class="card">
+          <h2>What works</h2>
+          <ul class="check-list">
+            <li>Consistency beats intensity.</li>
+            <li>Family accountability creates momentum.</li>
+            <li>Simple food is sustainable food.</li>
+            <li>Walking is medicine.</li>
+            <li>Tracking brings clarity.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>What we are fixing</h2>
+          <ul class="check-list">
+            <li>Sleep timing still needs tightening.</li>
+            <li>Festival/social events disrupt routines.</li>
+            <li>Pre-report anxiety affects consistency.</li>
+            <li>Busy days reduce logging quality.</li>
+          </ul>
+        </article>
       </section>
     </main>
   </div>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-top">
-        <div>
-          <p class="footer-logo">Project <span>150</span></p>
-          <p class="footer-tagline">One family. One mission. 150 years of healthy, independent life.</p>
-        </div>
-        <nav class="footer-nav">
-          <a href="/index.html">Home</a>
-          <a href="/our-story.html">Our Story</a>
-          <a href="/journey.html">The Journey</a>
-          <a href="/what-we-eat.html">What We Eat</a>
-          <a href="/recipes.html">Recipes</a>
-          <a href="/learnings.html">Learnings</a>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p>Project 150 · Hyderabad, India · Est. May 2026</p>
-        <p>A private family mission, shared publicly. No products. No coaching. Just the truth.</p>
-      </div>
+      <p class="footer-logo">Project <span>150</span></p>
+      <p class="footer-sub">One family. One mission. 150 years of healthy, independent life.</p>
+      <p class="footer-sub">A private family mission, shared publicly. No products. No coaching. Just the truth.</p>
     </div>
   </footer>
 
-  <script>
-    const nav = document.getElementById('site-nav');
-    const toggle = document.getElementById('nav-toggle');
-    const links = document.getElementById('nav-links');
-
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 10);
-    });
-
-    toggle?.addEventListener('click', () => {
-      links.classList.toggle('open');
-    });
-
-    // Mark active nav link
-    const currentPath = window.location.pathname;
-    document.querySelectorAll('.nav-links a').forEach(a => {
-      if (a.getAttribute('href') === currentPath || a.getAttribute('href') === currentPath.split('/').pop()) {
-        a.classList.add('active');
-      }
-      if (currentPath === '/' && a.getAttribute('href') === '/index.html') {
-        a.classList.add('active');
-      }
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section, .timeline-item, .person-card, .tracking-item, .report-item').forEach(el => {
-      el.classList.add('fade-in');
-      observer.observe(el);
-    });
-  </script>
+  <script src="main.js" defer></script>
 </body>
 </html>

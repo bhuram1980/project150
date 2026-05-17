@@ -1,99 +1,74 @@
-// Cursor
-const dot = document.querySelector('.cur');
-const ring = document.querySelector('.cur-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
-(function tick(){
-  rx+=(mx-rx)*0.1;ry+=(my-ry)*0.1;
-  if(dot){dot.style.left=mx+'px';dot.style.top=my+'px'}
-  if(ring){ring.style.left=rx+'px';ring.style.top=ry+'px'}
-  requestAnimationFrame(tick);
-})();
+const nav = document.getElementById("site-nav");
+const toggle = document.getElementById("nav-toggle");
+const links = document.getElementById("nav-links");
 
-// Nav scroll
-const nav=document.querySelector('.nav');
-window.addEventListener('scroll',()=>{
-  if(nav)nav.classList.toggle('scrolled',scrollY>30);
-},{passive:true});
+window.addEventListener("scroll", () => {
+  nav?.classList.toggle("scrolled", window.scrollY > 10);
+});
 
-// Burger
-const burger=document.querySelector('.nav-burger');
-const links=document.querySelector('.nav-links');
-if(burger&&links)burger.addEventListener('click',()=>links.classList.toggle('open'));
+toggle?.addEventListener("click", () => {
+  links?.classList.toggle("open");
+});
 
-// Scroll reveal
-const reveals=document.querySelectorAll('.reveal');
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}});
-},{threshold:0.07,rootMargin:'0px 0px -30px 0px'});
-reveals.forEach(el=>obs.observe(el));
-
-// Parallax bg number
-const bgNum=document.querySelector('.hero-bg-num');
-if(bgNum){
-  window.addEventListener('scroll',()=>{
-    bgNum.style.transform=`translateY(${scrollY*0.15}px)`;
-  },{passive:true});
-}
-
-// Number count-up on stat elements
-function countUp(el,target,duration=1200){
-  let start=0,startTime=null;
-  function step(ts){
-    if(!startTime)startTime=ts;
-    const progress=Math.min((ts-startTime)/duration,1);
-    const ease=1-Math.pow(1-progress,3);
-    el.textContent=Math.floor(ease*target);
-    if(progress<1)requestAnimationFrame(step);
-    else el.textContent=target;
+const currentPath = window.location.pathname;
+document.querySelectorAll(".nav-links a").forEach((a) => {
+  const href = a.getAttribute("href");
+  const shortPath = currentPath.split("/").pop();
+  if (href === currentPath || href === shortPath || (currentPath === "/" && href === "/index.html")) {
+    a.classList.add("active");
   }
-  requestAnimationFrame(step);
-}
-const statNums=document.querySelectorAll('.hero-stat-num,.statbox-num,.gym-big-num');
-const statObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      const n=parseInt(e.target.textContent);
-      if(!isNaN(n))countUp(e.target,n);
-      statObs.unobserve(e.target);
-    }
-  });
-},{threshold:0.5});
-statNums.forEach(el=>statObs.observe(el));
+});
 
-// Image lightbox for recipe/infographic assets
-const lightbox = document.getElementById('image-lightbox');
-const lightboxImg = document.getElementById('lightbox-image');
-const lightboxClose = document.getElementById('lightbox-close');
-const zoomables = document.querySelectorAll('img[data-lightbox="true"]');
-
-function closeLightbox() {
-  if (!lightbox) return;
-  lightbox.classList.remove('open');
-  lightbox.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-}
-
-if (lightbox && lightboxImg) {
-  zoomables.forEach((img) => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.currentSrc || img.src;
-      lightboxImg.alt = img.alt || 'Expanded image';
-      lightbox.classList.add('open');
-      lightbox.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
     });
+  },
+  { threshold: 0.1 }
+);
+
+document
+  .querySelectorAll("section, .timeline-item, .card, .project-card, .media-card")
+  .forEach((el) => {
+    el.classList.add("fade-in");
+    observer.observe(el);
   });
 
-  if (lightboxClose) {
-    lightboxClose.addEventListener('click', closeLightbox);
-  }
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
-  });
+const missionStart = new Date("2026-05-01");
+const today = new Date();
+const days = Math.floor((today - missionStart) / (1000 * 60 * 60 * 24));
+const daysEl = document.getElementById("days-counter");
+if (daysEl) {
+  let count = 0;
+  const interval = setInterval(() => {
+    count = Math.min(count + Math.ceil(days / 40), days);
+    daysEl.textContent = count;
+    if (count >= days) clearInterval(interval);
+  }, 30);
 }
+
+const lightbox = document.getElementById("image-lightbox");
+const lightboxImg = document.getElementById("lightbox-image");
+const lightboxClose = document.getElementById("lightbox-close");
+
+document.querySelectorAll('img[data-lightbox="true"], img.zoomable').forEach((img) => {
+  img.addEventListener("click", () => {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = img.currentSrc || img.src;
+    lightboxImg.alt = img.alt || "";
+    lightbox.classList.add("open");
+  });
+});
+
+lightboxClose?.addEventListener("click", () => lightbox?.classList.remove("open"));
+lightbox?.addEventListener("click", (e) => {
+  if (e.target === lightbox) lightbox.classList.remove("open");
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") lightbox?.classList.remove("open");
+});

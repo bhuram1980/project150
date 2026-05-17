@@ -36,37 +36,37 @@
 
   <div class="container">
     <main>
-      <section class="page-hero">
-        <div class="section-eyebrow">Recipes & guides</div>
-        <h1>Visual Food Library</h1>
-        <p class="page-subtitle">Tap any visual to zoom. This page keeps all recipe and infographic references in one place.</p>
+      <section>
+        <div class="eyebrow">Recipes & Guides</div>
+        <h1>Too many recipe side quests,<br /><em>all in one place</em>.</h1>
+        <p class="hero-subtitle">Tap any card to zoom. These are the exact visuals we use for meal prep and food decisions.</p>
       </section>
 
-      <section class="grid-3">
-        <article class="media-card">
-          <div class="image-frame"><img src="assets/images/recipes/mutton-pepper-fry-recipe-telugu.png" alt="Mutton pepper fry recipe visual" loading="lazy" decoding="async" data-lightbox="true" /></div>
-          <div class="media-card-body"><h3>Featured Recipe</h3><p>Telugu quick-reference recipe visual.</p></div>
-        </article>
-        <article class="media-card">
-          <div class="image-frame"><img src="assets/images/infographics/allowed-vegetables.png" alt="Allowed vegetables guide" loading="lazy" decoding="async" data-lightbox="true" /></div>
-          <div class="media-card-body"><h3>Allowed Vegetables</h3><p>Low-sugar vegetable reference.</p></div>
-        </article>
-        <article class="media-card">
-          <div class="image-frame"><img src="assets/images/infographics/allowed-grains.png" alt="Allowed grains guide" loading="lazy" decoding="async" data-lightbox="true" /></div>
-          <div class="media-card-body"><h3>Allowed Grains</h3><p>Millet and grain options with portions.</p></div>
-        </article>
-        <article class="media-card">
-          <div class="image-frame"><img src="assets/images/infographics/allowed-dals-protein.png" alt="Allowed dals and protein guide" loading="lazy" decoding="async" data-lightbox="true" /></div>
-          <div class="media-card-body"><h3>Dals & Protein</h3><p>Daily protein checklist reference.</p></div>
-        </article>
-        <article class="media-card">
-          <div class="image-frame"><img src="assets/images/infographics/allowed-oils-fruits-snacks-drinks.png" alt="Allowed oils fruits snacks drinks guide" loading="lazy" decoding="async" data-lightbox="true" /></div>
-          <div class="media-card-body"><h3>Fruits, Snacks, Drinks</h3><p>Allowed supportive foods and drinks.</p></div>
-        </article>
-        <article class="media-card">
-          <div class="image-frame"><img src="assets/images/infographics/foods-to-avoid.png" alt="Foods to avoid guide" loading="lazy" decoding="async" data-lightbox="true" /></div>
-          <div class="media-card-body"><h3>Foods To Avoid</h3><p>High-starch foods to minimize strictly.</p></div>
-        </article>
+      <section class="gallery">
+        <figure class="media-card">
+          <img src="assets/images/recipes/mutton-pepper-fry-recipe-telugu.png" alt="Mutton pepper fry recipe visual" class="zoomable" data-lightbox="true" />
+          <figcaption><h3>Mutton Pepper Fry</h3><p>Protein-focused Telugu recipe card.</p></figcaption>
+        </figure>
+        <figure class="media-card">
+          <img src="assets/images/recipes/protein-idli-recipe-telugu.png" alt="Protein idli recipe visual" class="zoomable" data-lightbox="true" />
+          <figcaption><h3>Protein Idli</h3><p>High-protein breakfast recipe card.</p></figcaption>
+        </figure>
+        <figure class="media-card">
+          <img src="assets/images/infographics/allowed-vegetables.png" alt="Allowed vegetables guide" class="zoomable" data-lightbox="true" />
+          <figcaption><h3>Allowed Vegetables</h3><p>Low sugar, high fiber chart.</p></figcaption>
+        </figure>
+        <figure class="media-card">
+          <img src="assets/images/infographics/allowed-grains.png" alt="Allowed grains guide" class="zoomable" data-lightbox="true" />
+          <figcaption><h3>Grains & Millets</h3><p>Portion-focused grain options.</p></figcaption>
+        </figure>
+        <figure class="media-card">
+          <img src="assets/images/infographics/allowed-dals-protein.png" alt="Allowed dals and protein guide" class="zoomable" data-lightbox="true" />
+          <figcaption><h3>Dals & Protein</h3><p>Daily protein reference visual.</p></figcaption>
+        </figure>
+        <figure class="media-card">
+          <img src="assets/images/infographics/foods-to-avoid.png" alt="Foods to avoid guide" class="zoomable" data-lightbox="true" />
+          <figcaption><h3>Foods To Avoid</h3><p>High-starch foods to avoid.</p></figcaption>
+        </figure>
       </section>
     </main>
   </div>
@@ -78,78 +78,12 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-top">
-        <div>
-          <p class="footer-logo">Project <span>150</span></p>
-          <p class="footer-tagline">One family. One mission. 150 years of healthy, independent life.</p>
-        </div>
-        <nav class="footer-nav">
-          <a href="/index.html">Home</a>
-          <a href="/our-story.html">Our Story</a>
-          <a href="/journey.html">The Journey</a>
-          <a href="/what-we-eat.html">What We Eat</a>
-          <a href="/recipes.html">Recipes</a>
-          <a href="/learnings.html">Learnings</a>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p>Project 150 · Hyderabad, India · Est. May 2026</p>
-        <p>A private family mission, shared publicly. No products. No coaching. Just the truth.</p>
-      </div>
+      <p class="footer-logo">Project <span>150</span></p>
+      <p class="footer-sub">One family. One mission. 150 years of healthy, independent life.</p>
+      <p class="footer-sub">A private family mission, shared publicly. No products. No coaching. Just the truth.</p>
     </div>
   </footer>
 
-  <script>
-    const nav = document.getElementById('site-nav');
-    const toggle = document.getElementById('nav-toggle');
-    const links = document.getElementById('nav-links');
-
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 10);
-    });
-
-    toggle?.addEventListener('click', () => {
-      links.classList.toggle('open');
-    });
-
-    // Mark active nav link
-    const currentPath = window.location.pathname;
-    document.querySelectorAll('.nav-links a').forEach(a => {
-      if (a.getAttribute('href') === currentPath || a.getAttribute('href') === currentPath.split('/').pop()) {
-        a.classList.add('active');
-      }
-      if (currentPath === '/' && a.getAttribute('href') === '/index.html') {
-        a.classList.add('active');
-      }
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section, .timeline-item, .person-card, .tracking-item, .report-item').forEach(el => {
-      el.classList.add('fade-in');
-      observer.observe(el);
-    });
-
-    const lightbox = document.getElementById('image-lightbox');
-    const lightboxImg = document.getElementById('lightbox-image');
-    const lightboxClose = document.getElementById('lightbox-close');
-    document.querySelectorAll('img[data-lightbox="true"]').forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.currentSrc || img.src;
-        lightbox.classList.add('open');
-      });
-    });
-    lightboxClose?.addEventListener('click', () => lightbox.classList.remove('open'));
-    lightbox?.addEventListener('click', (e) => {
-      if (e.target === lightbox) lightbox.classList.remove('open');
-    });
-  </script>
+  <script src="main.js" defer></script>
 </body>
 </html>

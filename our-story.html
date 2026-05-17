@@ -36,94 +36,39 @@
 
   <div class="container">
     <main>
-      <section class="page-hero">
-        <div class="section-eyebrow">Our story</div>
-        <h1>From Blood Reports to <em>150</em></h1>
-        <p class="page-subtitle">The true origin of a family mission that started with a set of numbers we refused to accept.</p>
+      <section>
+        <div class="eyebrow">Our Story</div>
+        <h1>From blood reports to <em>150</em></h1>
+        <p class="hero-subtitle">The true origin of a family mission that started with a set of numbers we refused to ignore.</p>
+      </section>
+
+      <section class="grid-2">
+        <article class="card">
+          <h2>The turning point</h2>
+          <p>In May 2026, I reviewed my father’s (74) and mother’s (66) reports from Tata 1mg and GVK Diagnostics. The numbers were clear: high sugar, low iron, low Vitamin D, and elevated heart risk indicators.</p>
+          <p>Those reports became a family decision point. We could accept it as “normal aging” or we could fight back with a disciplined system.</p>
+        </article>
+        <article class="card">
+          <h2>What we chose</h2>
+          <p>Strict meals. Daily walking. Medicines on time. Better sleep. Honest tracking. No excuses. No shortcuts.</p>
+          <p>Project 150 is the public journal of that choice. We share what works, what fails, and what changes each week.</p>
+        </article>
       </section>
 
       <section>
-        <p>In May 2026, I sat down with my father's and mother's blood reports from Tata 1mg and GVK Diagnostics. My father is 74. My mother is 66.</p>
-        <p>High blood sugar. Low iron. Low Vitamin D. Heart risk indicators. These were not abstract medical codes. These were warning signs about people I love.</p>
-        <p>We had two paths. Accept this as inevitable aging and manage decline, or build a real daily system and fight back together.</p>
-        <p>We chose to fight. Strict food discipline. Morning walks every day. Medicines on time. Better sleep. Honest tracking.</p>
-
-        <blockquote class="story-quote">
-          <p>"That is Project 150. A family health journal. Nothing more, nothing less."</p>
-        </blockquote>
-
-        <div class="truth-pills">
-          <span class="truth-pill">No coaching</span>
-          <span class="truth-pill">No products</span>
-          <span class="truth-pill">No memberships</span>
-          <span class="truth-pill highlight">Just the truth</span>
-        </div>
-
-        <p>If our journey helps one more family begin theirs, this mission is worth it.</p>
+        <p class="quote-block">“That is Project 150. A family health journal. Nothing more, nothing less.”</p>
       </section>
     </main>
   </div>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-top">
-        <div>
-          <p class="footer-logo">Project <span>150</span></p>
-          <p class="footer-tagline">One family. One mission. 150 years of healthy, independent life.</p>
-        </div>
-        <nav class="footer-nav">
-          <a href="/index.html">Home</a>
-          <a href="/our-story.html">Our Story</a>
-          <a href="/journey.html">The Journey</a>
-          <a href="/what-we-eat.html">What We Eat</a>
-          <a href="/recipes.html">Recipes</a>
-          <a href="/learnings.html">Learnings</a>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p>Project 150 · Hyderabad, India · Est. May 2026</p>
-        <p>A private family mission, shared publicly. No products. No coaching. Just the truth.</p>
-      </div>
+      <p class="footer-logo">Project <span>150</span></p>
+      <p class="footer-sub">One family. One mission. 150 years of healthy, independent life.</p>
+      <p class="footer-sub">A private family mission, shared publicly. No products. No coaching. Just the truth.</p>
     </div>
   </footer>
 
-  <script>
-    const nav = document.getElementById('site-nav');
-    const toggle = document.getElementById('nav-toggle');
-    const links = document.getElementById('nav-links');
-
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 10);
-    });
-
-    toggle?.addEventListener('click', () => {
-      links.classList.toggle('open');
-    });
-
-    // Mark active nav link
-    const currentPath = window.location.pathname;
-    document.querySelectorAll('.nav-links a').forEach(a => {
-      if (a.getAttribute('href') === currentPath || a.getAttribute('href') === currentPath.split('/').pop()) {
-        a.classList.add('active');
-      }
-      if (currentPath === '/' && a.getAttribute('href') === '/index.html') {
-        a.classList.add('active');
-      }
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section, .timeline-item, .person-card, .tracking-item, .report-item').forEach(el => {
-      el.classList.add('fade-in');
-      observer.observe(el);
-    });
-  </script>
+  <script src="main.js" defer></script>
 </body>
 </html>
